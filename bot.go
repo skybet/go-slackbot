@@ -138,6 +138,20 @@ func (b *Bot) ReplyInThread(evt *slack.MessageEvent, msg string, typing bool) {
 	b.Client.PostMessage(evt.Msg.Channel, msg, params)
 }
 
+// ReplyInThreadWithAttachments replys to a message event inside a thread with a Slack Attachments message.
+func (b *Bot) ReplyInThreadWithAttachments(evt *slack.MessageEvent, attachments []slack.Attachment, typing bool) {
+	params := slack.PostMessageParameters{AsUser: true}
+	params.Attachments = attachments
+
+	if evt.ThreadTimestamp == "" {
+		params.ThreadTimestamp = evt.Timestamp
+	} else {
+		params.ThreadTimestamp = evt.ThreadTimestamp
+	}
+
+	b.Client.PostMessage(evt.Msg.Channel, "", params)
+}
+
 // Type sends a typing message and simulates delay (max 2000ms) based on message size.
 func (b *Bot) Type(evt *slack.MessageEvent, msg interface{}) {
 	msgLen := msgLen(msg)
