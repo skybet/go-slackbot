@@ -3,7 +3,7 @@ package slackbot
 import (
 	"testing"
 
-	"github.com/essentialkaos/slack"
+	"github.com/skybet/slack"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -8,7 +8,7 @@ import (
 
 	slackbot "github.com/adampointer/go-slackbot"
 	"github.com/chris-skud/go-wit"
-	"github.com/essentialkaos/slack"
+	"github.com/skybet/slack"
 )
 
 func main() {

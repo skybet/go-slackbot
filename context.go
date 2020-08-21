@@ -1,7 +1,7 @@
 package slackbot
 
 import (
-	"github.com/essentialkaos/slack"
+	"github.com/skybet/slack"
 	"golang.org/x/net/context"
 )
 

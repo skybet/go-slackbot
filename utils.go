@@ -3,7 +3,7 @@ package slackbot
 import (
 	"regexp"
 
-	"github.com/essentialkaos/slack"
+	"github.com/skybet/slack"
 )
 
 // StripDirectMention removes a leading mention (aka direct mention) from a message string
