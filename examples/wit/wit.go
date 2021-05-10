@@ -6,8 +6,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	slackbot "github.com/adampointer/go-slackbot"
 	"github.com/chris-skud/go-wit"
+	slackbot "github.com/skybet/go-slackbot"
 	"github.com/skybet/slack"
 )
 
