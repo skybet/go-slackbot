@@ -71,7 +71,7 @@ type Bot struct {
 // Run listens for incoming slack RTM events, matching them to an appropriate handler.
 func (b *Bot) Run() {
 	b.RTM = b.Client.NewRTM()
-	fmt.Printf("%v", b.RTM.GetInfo())
+	fmt.Printf("RTM Info: %v\n", b.RTM.GetInfo())
 	go b.RTM.ManageConnection()
 	for {
 		select {
